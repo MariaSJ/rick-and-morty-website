@@ -1,0 +1,51 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.detail{
+    width: 750px;
+    height: 390px;
+    background-color: $backgroundDetail;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &__close{
+        font-family: $mainFont;
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+        margin-left: 650px;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &__img{
+        border-radius: 150px;
+    }
+    &__data{
+        width: 310px;
+        padding-left: 10px;
+        font-family: $mainFont;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+    &__name{
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
