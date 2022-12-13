@@ -2,15 +2,19 @@ import '../styles/App.scss';
 //import logo from '../images/Rick-and-Morty.png'
 import {useEffect, useState} from 'react';
 import callToApi from '../services/api';
+import { Routes, Route, matchPath, useLocation } from 'react-router-dom';
 //import ls from '../services/localStorage';
 //import PropTypes from 'prop-types';
 
 import CharacterList from './CharacterList';
+import Filters from './Filters';
+import CharacterDetail from './CharacterDetail';
 
 function App() {
 
 // STATES
-const [characterList , setCharacterList] = useState([]);
+  const [characterList, setCharacterList] = useState([]);
+  const [filterByName , setFilterByName ] = useState("");
   
 // USEEFFECT
 
@@ -22,12 +26,33 @@ useEffect(() => {
   });
 }, []);
 
+// HANDLER FUNCTIONS
+  
+  const handlerFilterByName = (value) => {
+    setFilterByName(value);
+  };
 
+  const filteredCharacters = characterList
+    .filter((character) => filterByName === "" || character.name.toLowerCase().includes(filterByName.toLowerCase()));
+  
   return (
     <>
-      <h1>Rick y Morty</h1>
-      {/* <img className='logo' src={logo} alt=""></img> */}
-      <CharacterList characterList={characterList} />
+      <header className="header">
+        <h1>Rick y Morty</h1>
+        {/* <img className='logo' src={logo} alt=""></img> */}
+      </header>
+      <main className="main">
+        <Routes>
+          <Route path="/" element={ 
+            <>
+              <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} />
+              <CharacterList characterList={filteredCharacters} />
+            </>
+          } />
+
+          <Route path="/character/:characterId" element={<CharacterDetail />} />
+        </Routes>
+      </main>
     </>
   );
 }
