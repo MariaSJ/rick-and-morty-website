@@ -7,7 +7,7 @@ const FilterByName = (props) => {
 
     return (
         <>
-        <input className="form__search-name" type="text" name="search-name" id="search-name" value={props.filterByName} onChange={handlerChangeName} />
+        <input className="form__search-name" type="text" name="search-name" id="search-name" placeholder="Ej:Rick Sanchez" value={props.filterByName} onInput={handlerChangeName} />
         </>
     );
 }

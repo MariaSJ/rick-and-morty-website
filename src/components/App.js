@@ -6,9 +6,11 @@ import { Routes, Route, matchPath, useLocation } from 'react-router-dom';
 //import ls from '../services/localStorage';
 //import PropTypes from 'prop-types';
 
+import Header from './Header';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
+
 
 function App() {
 
@@ -32,27 +34,41 @@ useEffect(() => {
     setFilterByName(value);
   };
 
+
+// FILTERS 
+  
   const filteredCharacters = characterList
     .filter((character) => filterByName === "" || character.name.toLowerCase().includes(filterByName.toLowerCase()));
+
+// ROUTES
+
+  // Obtengo la info de la ruta. Me quedo solo con pathname
+  const { pathname } = useLocation();
+
+  // Función matchPath, cogemos el valor variable de la ruta -character id-
+  const dataUrl = matchPath('/character/:characterId', pathname);
+
+  // Validación para sacar el id del personaje
+  const characterId = dataUrl !== null ? dataUrl.params.characterId : null;
   
+  const characterFound = characterList.find((character) => character.id === parseInt(characterId));
+
+
   return (
     <>
-      <header className="header">
-        <h1>Rick y Morty</h1>
-        {/* <img className='logo' src={logo} alt=""></img> */}
-      </header>
-      <main className="main">
-        <Routes>
+      <Header />
+      <Routes>
           <Route path="/" element={ 
             <>
-              <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} />
-              <CharacterList characterList={filteredCharacters} />
+              <main className="main">
+                <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} />
+                <CharacterList characterList={filteredCharacters} />
+              </main> 
             </>
           } />
 
-          <Route path="/character/:characterId" element={<CharacterDetail />} />
+          <Route path="/character/:characterId" element={<CharacterDetail character={characterFound} />} />
         </Routes>
-      </main>
     </>
   );
 }
