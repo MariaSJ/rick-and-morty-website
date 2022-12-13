@@ -67,7 +67,7 @@ useEffect(() => {
             </>
           } />
 
-          <Route path="/character/:characterId" element={<CharacterDetail character={characterFound} />} />
+          <Route path="/character/:characterId" element={<CharacterDetail characterFound={characterFound} />} />
         </Routes>
     </>
   );

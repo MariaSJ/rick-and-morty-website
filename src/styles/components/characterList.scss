@@ -1,0 +1,20 @@
+.characters{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    font-family: $mainFont;
+
+    &__list{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 350px;
+        grid-auto-flow: row;
+        grid-gap: 30px;
+    }
+}
