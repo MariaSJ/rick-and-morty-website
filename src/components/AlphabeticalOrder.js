@@ -7,7 +7,7 @@ const AlphabeticalOrder = (props) => {
     
     return (
         <>
-            <input type="button" value="A-Z" onClick={handlerClick}/>
+            <input className="form__btn" type="button" value="A - Z" onClick={handlerClick}/>
         </>
     );
 }

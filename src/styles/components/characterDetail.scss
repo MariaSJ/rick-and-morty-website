@@ -9,6 +9,7 @@
 .detail{
     width: 750px;
     height: 390px;
+    margin-top: 50px;
     background-color: $backgroundDetail;
     border-radius: 50px;
     display: flex;
@@ -23,6 +24,9 @@
         font-weight: bold;
         font-size: 40px;
         margin-left: 650px;
+        &:hover{
+            color: $backgroundCard;
+        }
     }
 
     &__card{
@@ -34,6 +38,7 @@
     }
     &__img{
         border-radius: 150px;
+        margin-bottom: 20px;
     }
     &__data{
         width: 310px;
@@ -43,9 +48,11 @@
         display: flex;
         flex-direction: column;
         gap:10px;
+        margin-bottom: 20px;
     }
     &__name{
         font-size: 40px;
         font-weight: bold;
     }
 }
+

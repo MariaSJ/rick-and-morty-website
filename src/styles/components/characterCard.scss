@@ -1,6 +1,6 @@
 .card{
     width: 250px;
-    height: 340px;
+    height: 380px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
 
     &__link{
         width: 250px;
-        height: 340px;
+        height: 380px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -23,12 +23,58 @@
     }
 
     &__img{
-        width: 220px;
-        height: auto;
+        width: 230px;
+        height: 250px;
         border-radius: 30px;
     }
 
     &__name{
         font-size: 25px;
+        text-align: center;
+        margin-top: 5px;
     }
+    &__species{
+        margin-bottom: 5px;
+    }
+}
+
+.red{
+    height: 34px;
+    width: 80px;
+    margin-left: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $redAlive;
+    text-align: center;
+    border: 3px solid $redAlive;
+    border-radius: 5px;
+    transform: rotate(0.10turn) translateY(70%);
+}
+
+.green{
+    height: 34px;
+    width: 80px;
+    margin-left: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $greenAlive;
+    text-align: center;
+    border: 3px solid $greenAlive;
+    border-radius: 5px;
+    transform: rotate(0.10turn) translateY(70%);
+}
+.blue{
+    height: 31px;
+    width: 105px;
+    margin-left: 150px;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $greyUnknow;
+    text-align: center;
+    border: 3px solid $greyUnknow;
+    border-radius: 5px;
+    transform: rotate(0.10turn) translateY(70%);
 }
