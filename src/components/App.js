@@ -16,7 +16,10 @@ function App() {
 
 // STATES
   const [characterList, setCharacterList] = useState([]);
-  const [filterByName , setFilterByName ] = useState("");
+  const [filterByName, setFilterByName] = useState("");
+  const [filterBySpecies, setFilterBySpecies] = useState("");
+  const [filteredList, setFilteredList] = useState([]);
+
   
 // USEEFFECT
 
@@ -34,11 +37,24 @@ useEffect(() => {
     setFilterByName(value);
   };
 
+  const handlerFilterBySpecies = (value) => {
+    setFilterBySpecies(value);
+  };
+
+  const renderAlphabeticalOrder = () => {
+    const orderedList = filteredList.sort((x, y) => x.name.localeCompare(y.name));
+    setFilteredList([...orderedList]);
+  };
+
 
 // FILTERS 
   
   const filteredCharacters = characterList
-    .filter((character) => filterByName === "" || character.name.toLowerCase().includes(filterByName.toLowerCase()));
+    .filter((character) => filterByName === "" || character.name.toLowerCase().includes(filterByName.toLowerCase()))
+    .filter((character) => filterBySpecies === "" ? "All" : character.species === filterBySpecies);
+    
+
+  
 
 // ROUTES
 
@@ -53,7 +69,6 @@ useEffect(() => {
   
   const characterFound = characterList.find((character) => character.id === parseInt(characterId));
 
-
   return (
     <>
       <Header />
@@ -61,8 +76,8 @@ useEffect(() => {
           <Route path="/" element={ 
             <>
               <main className="main">
-                <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} />
-                <CharacterList characterList={filteredCharacters} />
+              <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} />
+                <CharacterList characterList={filteredCharacters}/>
               </main> 
             </>
           } />
