@@ -40,12 +40,10 @@
     &__img{
         width: 220px;
         border-radius: 150px;
-        //margin-top: 10px;
     }
     &__data{
         width: 280px;
         text-align: center;
-        //padding-left: 10px;
         font-family: $mainFont;
         font-size: 20px;
         display: flex;
@@ -62,112 +60,60 @@
 @media screen and (min-width:768px){
     .detail{
         width: 600px;
-        // height: auto;
         margin-top: 50px;
-        // background-color: $backgroundDetail;
-        // border-radius: 50px;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-content: center;
-        // align-items: center;
-    
+        
         &__close{
-            // font-family: $mainFont;
-            // color: white;
-            // font-weight: bold;
             font-size: 35px;
-            // margin-left: 520px;
-            // &:hover{
-            //     color: $backgroundCard;
-            // }
+            margin-left: 520px;
         }
     
         &__card{
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
             gap: 10px;
         }
         &__img{
             border-radius: 150px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         &__data{
-            width: 330px;
+            width: 320px;
             text-align: left;
-            padding-left: 10px;
-            font-family: $mainFont;
+            padding-left: 20px;
             font-size: 30px;
-            display: flex;
-            flex-direction: column;
-            gap:10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         &__name{
             font-size: 40px;
-            font-weight: bold;
         }
     }
 }
 
 @media screen and (min-width:1080px){
-    .main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-    
     .detail{
         width: 750px;
         height: 390px;
         margin-top: 50px;
-        background-color: $backgroundDetail;
-        border-radius: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
     
         &__close{
-            font-family: $mainFont;
-            color: white;
-            font-weight: bold;
             font-size: 40px;
             margin-left: 650px;
-            &:hover{
-                color: $backgroundCard;
-            }
         }
     
         &__card{
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
+            gap: 20px;
         }
         &__img{
-            border-radius: 150px;
-            margin-bottom: 20px;
+            width: 300px;
         }
         &__data{
-            width: 310px;
+            width: 320px;
+            text-align: left;
             padding-left: 10px;
-            font-family: $mainFont;
             font-size: 30px;
-            display: flex;
-            flex-direction: column;
-            gap:10px;
-            margin-bottom: 20px;
-        }
-        &__name{
-            font-size: 40px;
-            font-weight: bold;
+            margin-bottom: 30px;
         }
     }
 }

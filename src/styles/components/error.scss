@@ -1,0 +1,55 @@
+.error{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+
+    &__img{
+        width: 120px;
+    }
+
+    &__text{
+        font-family: $mainFont;
+        font-size: 28px;
+        text-align: center;
+    }
+    &__goBack{
+        font-family: $mainFont;
+        font-size: 25px;
+        font-weight: bold;
+        color: $backgroundDetail;
+        &:hover{
+            color: $greenAlive;
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    .error{
+        width: 500px;
+        &__img{
+            width: 130px;
+        }
+    }
+}
+
+@media screen and (min-width:1080px){
+    .error{
+        width: 600px;
+        
+        &__img{
+            width: 150px;
+        }
+    
+        &__text{
+            font-size: 35px;
+        }
+        &__goBack{
+            font-size: 25px;
+        }
+    }
+}
