@@ -5,7 +5,7 @@ const CharacterList = ({ characterList }) => {
     if (characterList.length === 0) {
         return <NotFound/>
     }else{
-    const oneCharacter = characterList.map((character) => {
+        const oneCharacter = characterList.map((character) => {
         return <CharacterCard character={character} key={character.id} />
     })
         
@@ -16,9 +16,5 @@ const CharacterList = ({ characterList }) => {
     ); 
     }
 }
-
-// CharacterList.propTypes = {
-
-// };
 
 export default CharacterList;

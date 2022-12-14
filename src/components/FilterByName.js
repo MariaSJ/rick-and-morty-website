@@ -12,8 +12,4 @@ const FilterByName = (props) => {
     );
 }
 
-// FilterByName.propTypes = {
-
-// };
-
 export default FilterByName;

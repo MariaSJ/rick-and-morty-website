@@ -12,8 +12,4 @@ const AlphabeticalOrder = (props) => {
     );
 }
 
-// AlphabeticalOrder.propTypes = {
-
-// };
-
 export default AlphabeticalOrder;

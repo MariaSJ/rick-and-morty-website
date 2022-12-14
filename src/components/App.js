@@ -85,13 +85,13 @@ useEffect(() => {
       <Routes>
           <Route path="/" element={ 
             <>
-              <main className="main">
+            <main className="main">
                 <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} />
-                <CharacterList characterList={filteredCharacters}/>
-              </main> 
+                <CharacterList characterList={filteredCharacters} />
+            </main>
             </>
           } />
-          <Route path="/character/:characterId" element={<CharacterDetail characterFound={characterFound} />} />
+        <Route path="/character/:characterId" element={<CharacterDetail characterFound={characterFound} />} />
       </Routes>
     </>
   );

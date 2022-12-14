@@ -13,8 +13,4 @@ const CharacterCard = (props) => {
     );
 }
 
-// CharacterCard.propTypes = {
-
-// };
-
 export default CharacterCard;

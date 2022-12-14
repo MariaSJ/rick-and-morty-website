@@ -6,6 +6,10 @@
     align-items: center;
     border-radius: 30px;
     background-color: $backgroundCard;
+    transition: transform 0.5 2s;
+    &:hover{
+        transform: scale(1.02);
+    }
 
     &__link{
         width: 250px;

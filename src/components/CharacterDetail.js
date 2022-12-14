@@ -25,8 +25,4 @@ const CharacterDetail = ({ characterFound }) => {
     }
     };
 
-// CharacterDetail.propTypes = {
-
-// };
-
 export default CharacterDetail;

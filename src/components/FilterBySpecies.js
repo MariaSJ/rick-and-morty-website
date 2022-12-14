@@ -8,7 +8,7 @@ const FilterBySpecies = (props) => {
         <>
         <div className="form__species">
             <label className="form__label-species" htmlFor="Species">Species</label>
-            <select className="form__select-species" name="Species" id="Species" value={props.filterBySpecies} onInput={handlerChangeSpecies}>
+             <select className="form__select-species" name="Species" id="Species" value={props.filterBySpecies} onInput={handlerChangeSpecies}> 
                 <option value="">All</option>
                 <option value="Human">Human</option>
                 <option value="Alien">Alien</option>
@@ -17,9 +17,5 @@ const FilterBySpecies = (props) => {
         </>
     );
 }
-
-// FilterBySpecies.propTypes = {
-
-// };
 
 export default FilterBySpecies;

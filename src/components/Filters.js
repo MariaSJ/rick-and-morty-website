@@ -16,8 +16,4 @@ const Filters = (props) => {
     );
 }
 
-// Filters.propTypes = {
-
-// };
-
 export default Filters;

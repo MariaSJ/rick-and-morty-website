@@ -17,15 +17,6 @@
         font-size: 28px;
         text-align: center;
     }
-    &__goBack{
-        font-family: $mainFont;
-        font-size: 25px;
-        font-weight: bold;
-        color: $backgroundDetail;
-        &:hover{
-            color: $greenAlive;
-        }
-    }
 }
 
 @media screen and (min-width:768px){
@@ -47,9 +38,6 @@
     
         &__text{
             font-size: 35px;
-        }
-        &__goBack{
-            font-size: 25px;
         }
     }
 }
