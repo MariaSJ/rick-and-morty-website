@@ -17,6 +17,7 @@ function App() {
   const [filterByName, setFilterByName] = useState("");
   const [filterBySpecies, setFilterBySpecies] = useState("");
   const [order, setOrder] = useState(false); //creo una variable de estado de tipo booleano en false
+  const [filterByNumber , setFilterByNumber] = useState(0);
 
   
 // USEEFFECT
@@ -45,11 +46,16 @@ useEffect(() => {
     setOrder(!aux);
   };
 
+  const handlerFilterByNumber = (value) => {
+    value === "" ? setFilterByNumber(0) : setFilterByNumber(value);
+  };
+
 // FILTERS 
   
   const filteredCharacters = characterList
     .filter((character) => filterByName === "" || character.name.toLowerCase().includes(filterByName.toLowerCase()))
     .filter((character) => filterBySpecies === "" ? "All" : character.species === filterBySpecies)
+    .filter((character) => filterByNumber === 0 ? true : character.episodes === parseInt(filterByNumber))
     .sort((a, b) => {
       if (order) {
         //x.name.localeCompare(y.name);
@@ -86,7 +92,7 @@ useEffect(() => {
           <Route path="/" element={ 
             <>
             <main className="main">
-                <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} />
+              <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} handlerFilterByNumber={handlerFilterByNumber} filterByNumber={filterByNumber} />
                 <CharacterList characterList={filteredCharacters} />
             </main>
             </>
