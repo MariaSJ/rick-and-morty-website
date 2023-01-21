@@ -8,7 +8,7 @@ import Header from './Header';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
-import Pagination from './Pagination';
+// import Pagination from './Pagination';
 
 
 function App() {
@@ -95,7 +95,7 @@ useEffect(() => {
             <main className="main">
               <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} handlerFilterByNumber={handlerFilterByNumber} filterByNumber={filterByNumber} />
               <CharacterList characterList={filteredCharacters} />
-              <Pagination />
+              {/* <Pagination /> */}
             </main>
             </>
           } />
