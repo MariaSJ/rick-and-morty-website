@@ -10,5 +10,5 @@ You'll also be able to **alphabetise characters**!
 This page is mocked and dynamised through **HTML**, **SCSS** and **React JS**.
 
 ## Let's go!
-http://beta.adalab.es/modulo-3-evaluacion-final-MariaSJ/
+https://mariasj.github.io/rick-and-morty-website/
 
