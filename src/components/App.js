@@ -8,7 +8,7 @@ import Header from './Header';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
-// import Pagination from './Pagination';
+import Pagination from './Pagination';
 
 
 function App() {
@@ -18,7 +18,11 @@ function App() {
   const [filterByName, setFilterByName] = useState("");
   const [filterBySpecies, setFilterBySpecies] = useState("");
   const [order, setOrder] = useState(false); //creo una variable de estado de tipo booleano en false
-  const [filterByNumber , setFilterByNumber] = useState(0);
+  const [filterByNumber, setFilterByNumber] = useState(0);
+  
+  //pagination states
+
+  const [charactersPerPage , setcharactersPerPage] = useState();
 
   
 // USEEFFECT
@@ -95,7 +99,7 @@ useEffect(() => {
             <main className="main">
               <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} handlerFilterByNumber={handlerFilterByNumber} filterByNumber={filterByNumber} />
               <CharacterList characterList={filteredCharacters} />
-              {/* <Pagination /> */}
+              <Pagination />
             </main>
             </>
           } />

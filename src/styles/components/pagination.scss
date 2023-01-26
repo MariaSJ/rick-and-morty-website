@@ -1,0 +1,34 @@
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: $mainFont;
+
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        margin: 20px;
+    }
+
+    &__previous{
+        order: -1;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__next{
+        order: 1;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__list{
+        order: -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
