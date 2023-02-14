@@ -1,5 +1,6 @@
 import CharacterCard from './CharacterCard';
 import NotFound from './NotFound';
+import ScrollUp from './ScrollUp';
 
 const CharacterList = ({ characterList }) => {
     if (characterList.length === 0) {
@@ -12,6 +13,7 @@ const CharacterList = ({ characterList }) => {
     return (
         <section className="characters">
             <ul className="characters__list">{oneCharacter}</ul>
+            <ScrollUp />
         </section>
     ); 
     }

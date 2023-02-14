@@ -14,9 +14,10 @@ const callToApi = () => {
           origin: character.origin.name,
           episodes: character.episode.length,
         };
+        
       });
       return cleanData;
     });
-  };
+};
   
 export default callToApi;
