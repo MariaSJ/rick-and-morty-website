@@ -1,0 +1,37 @@
+.landing{
+    height: 100vh;
+    background-image: url(../../images/backgroundLanding.png);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &__logo{
+        width: 350px;
+    }
+
+    &__title{
+        font-family: $mainFont;
+        font-size: 25px;
+    }
+
+    &__img{
+        height: 150px;
+        animation: bounce 0.5s;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+        animation-iteration-count: infinite;
+        }
+          
+        @keyframes bounce {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+            to {
+                transform: translate3d(0, 200px, 0);
+            }
+    }
+}

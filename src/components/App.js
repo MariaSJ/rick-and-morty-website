@@ -7,6 +7,7 @@ import Header from './Header';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
+import Landing from './Landing';
 // import Pagination from './Pagination';
 
 
@@ -91,10 +92,11 @@ useEffect(() => {
 
   return (
     <>
-      <Header />
-      <Routes>
-          <Route path="/" element={ 
+      <Routes> 
+          <Route path="/" element={<Landing />} />
+          <Route path="/characters" element={ 
             <>
+            <Header />
             <main className="main">
               <Filters handlerFilterByName={handlerFilterByName} filterByName={filterByName} handlerFilterBySpecies={handlerFilterBySpecies} filterBySpecies={filterBySpecies} renderAlphabeticalOrder={renderAlphabeticalOrder} handlerFilterByNumber={handlerFilterByNumber} filterByNumber={filterByNumber} />
               <CharacterList characterList={filteredCharacters} />

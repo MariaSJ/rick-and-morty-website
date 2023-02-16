@@ -1,5 +1,6 @@
 @import 'core/reset';
 @import 'core/variables';
+@import 'components/landing';
 @import 'components/header';
 @import 'components/filters';
 @import 'components/error';
@@ -7,6 +8,7 @@
 @import 'components/characterCard';
 @import 'components/characterDetail';
 @import 'components/pagination';
+
 
 body{
     background-color: black;
